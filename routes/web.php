@@ -9,10 +9,10 @@ Route::get('/', [App\Http\Controllers\MovieController::class, 'index']);
 
 Route::get('/openrouter', [OpenRouterController::class, 'chat']);
 
-Route::get('/phim','App\Http\Controllers\MovieController1@phim');
-Route::get('/theloai/{id}','App\Http\Controllers\MovieController1@theloai');
-Route::get('/chitiet/{id}','App\Http\Controllers\MovieController1@chitiet');
-Route::post('/timkiem','App\Http\Controllers\MovieController1@timkiem');
+Route::get('/phim','App\Http\Controllers\MovieController@phim');
+Route::get('/theloai/{id}','App\Http\Controllers\MovieController@theloai');
+Route::get('/chitiet/{id}','App\Http\Controllers\MovieController@chitiet');
+Route::post('/timkiem','App\Http\Controllers\MovieController@timkiem');
 
 use App\Http\Controllers\AdminMovieController;
 
