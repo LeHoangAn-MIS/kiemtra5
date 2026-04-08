@@ -1,10 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\OpenRouterController;
+use App\Http\Controllers\MovieController3;
 
-Route::get('/', [App\Http\Controllers\MovieController::class, 'index']);
-
-
-
-Route::get('/openrouter', [OpenRouterController::class, 'chat']);
+Route::resource('phim', MovieController3::class)->parameters(['phim' => 'movie']);
