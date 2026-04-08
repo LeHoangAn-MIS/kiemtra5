@@ -112,7 +112,7 @@
                     </div>
                     <ul class="list-group list-group-flush list-group-movie">
                        @foreach($genre as $row)
-                       <a href="{{url('/theloai/'.$row->id)}}">{{$row->genre_name_vn}}</a>
+                       <a href="{{url('theloai/'.$row->id)}}">{{$row->genre_name_vn}}</a>
                        @endforeach
                     </ul>
                     </div>
