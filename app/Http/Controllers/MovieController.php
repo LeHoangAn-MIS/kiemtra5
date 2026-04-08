@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class MovieController extends Controller
 {
@@ -17,7 +18,7 @@ class MovieController extends Controller
                             and vote_average > 7
                             order by release_date desc 
                             limit 12");
-        return view("movie.index1", compact("data"));
+        return view("movie.index", compact("data"));
     }
 
     function theloai($id)
@@ -34,7 +35,7 @@ class MovieController extends Controller
 
         $genre = DB::select("select * from genre");
 
-        return view("movie.index1", compact("data", "genre"));
+        return view("movie.index", compact("data", "genre"));
     }
 
     function chitiet($id)
@@ -51,6 +52,6 @@ class MovieController extends Controller
 
         $genre = DB::select("SELECT * FROM genre");
 
-        return view("movie.index1", compact("data", "genre"));
+        return view("movie.index", compact("data", "genre"));
     }
 }

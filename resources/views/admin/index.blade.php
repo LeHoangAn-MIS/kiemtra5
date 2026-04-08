@@ -10,7 +10,7 @@
         </div>
     @endif
 
-    <a href="#" class="btn btn-success mb-3">Thêm</a>
+    <a href="{{ route('phim.create') }}" class="btn btn-success mb-3">Thêm</a>
 
     <table id="movie-table" class="table table-bordered table-hover bg-white">
         <thead class="thead-light">
